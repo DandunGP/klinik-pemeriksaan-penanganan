@@ -1,6 +1,5 @@
 <h1>Tabel Pasien</h1>
 <?php
-require 'functions.php';
 $data = query('select * from pasien');
 ?>
 <a href="dashboard.php?tab=formPasien" class="btn btn-primary pl-3 py-1 mt-4 mb-4"><i class="fa-solid fa-user-plus pr-2"></i>Tambah
@@ -31,8 +30,8 @@ $data = query('select * from pasien');
                 <td> <?= $dt['alamat'] ?></td>
                 <td> <?= $dt['telepon'] ?></td>
                 <td>
-                    <a href="dashboard.php?tab=editPasien&norm=<?= $pasien['norm'] ?>" class="btn btn-success pl-3 py-0"><i class="fa-solid fa-pen pr-2"></i>Edit</a>
-                    <a href="dashboard.php?tab=deletePasien&norm=<?= $pasien['norm'] ?>" class="btn btn-danger pl-3 py-0" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa-solid fa-trash pr-2"></i>Delete</a>
+                    <a href="dashboard.php?tab=editPasien&norm=<?= $dt['no_rm'] ?>" class="btn btn-success pl-3 py-0"><i class="fa-solid fa-pen pr-2"></i>Edit</a>
+                    <a href="dashboard.php?tab=deletePasien&id=<?= $dt['no_rm'] ?>" class="btn btn-danger pl-3 py-0" onclick="return confirm('Are you sure you want to delete this item?');"><i class="fa-solid fa-trash pr-2"></i>Delete</a>
                 </td>
             </tr>
         <?php } ?>

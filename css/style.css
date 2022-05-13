@@ -30,7 +30,7 @@
 }
 
 .nav-item:hover {
-    background-color: rgb(144, 144, 144);
+    background-color: rgb(124, 124, 124);
     color: white;
 }
 
@@ -38,9 +38,11 @@
     border-radius: 10px;
 }
 
-.menu-dropdown {
+
+.dropdown-menu {
     text-decoration: none;
-    width: 100% !important;
+    min-width: none !important;
+    width: fit-content !important;
 }
 
 #content {

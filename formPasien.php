@@ -1,8 +1,8 @@
 <h1>Tambah Pasien</h1>
 <form action="" method="post" class="mt-4">
     <div class="form-group">
-        <label for="noRM">No Rekam Medis</label>
-        <input type="number" class="form-control" name="noRM" value="" maxlength="6" required>
+        <label for="norm">No Rekam Medis</label>
+        <input type="number" class="form-control" name="norm" value="" maxlength="6" required>
     </div>
     <div class="form-group">
         <label for="nama_pasien">Nama Pasien</label>
@@ -53,3 +53,15 @@
     </div>
     <button type="submit" name="submit" class="btn btn-primary" style="width:150px">Submit</button>
 </form>
+
+<?php
+    if(isset($_POST['submit'])){
+        if(tambahPasien()){
+            echo "<script>alert('Tambah Pasien Berhasil')
+                    location.href = 'dashboard.php'
+            </script>";
+        } else {
+            echo "<script>alert('Tambah Pasien Gagal')</script>";
+        }
+    }
+?>
